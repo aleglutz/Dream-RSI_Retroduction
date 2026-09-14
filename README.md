@@ -21,12 +21,16 @@
 
 # Dream-RSI: Recursive Self-Improvement<br>through Evolving Worlds
 
-**Agents need dreams for recursive self-improvement — and their own history is already the simulator to dream in.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tagline-dark.svg">
+  <img width="721" src="assets/tagline-light.svg"
+       alt="An agent must dream to recursively self-improve. History is the world it dreams in.">
+</picture>
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](https://www.dream-rsi.com/assets/dream-rsi.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](papers/Dream-RSI.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b.svg)](https://www.dream-rsi.com)
 [![Website](https://img.shields.io/badge/Website-dream--rsi.com-1a73e8.svg)](https://www.dream-rsi.com)
-[![Tasks](https://img.shields.io/badge/tasks-8%20across%203%20domains-555.svg)](https://www.dream-rsi.com/assets/dream-rsi.pdf)
+[![Tasks](https://img.shields.io/badge/tasks-8%20across%203%20domains-555.svg)](papers/Dream-RSI.pdf)
 
 Tong Zheng<sup>1,2</sup>,
 Xidong Wu<sup>1✉</sup>,
@@ -71,7 +75,7 @@ Yunsong Guo<sup>1</sup>
 ## News
 
 - **Sep 2026** — Preprint and project page released:
-  [paper (PDF)](https://www.dream-rsi.com/assets/dream-rsi.pdf) ·
+  [paper (PDF)](papers/Dream-RSI.pdf) ·
   [dream-rsi.com](https://www.dream-rsi.com)
 
 ## Overview
@@ -110,12 +114,14 @@ off-policy feedback. The improved policy is redeployed online, continuously expa
 
 ## Highlights
 
-- **Dreaming is free.** Scoring a policy against the record costs no discovery agent, no evaluator
-  and no re-execution — only a traversal of outcomes that were already paid for.
-- **What improves is code, not weights.** The exploration policy is an executable program deciding
-  where to search, what runs in parallel and when to stop. The coding agent is never touched.
-- **Improvement is monotone by construction.** The incumbent policy is always one of the candidates,
-  so a round can only replace it with something that scores better on the accumulated history.
+- **History as replay simulator.** We conceptualize completed discovery histories as replay
+  simulators, which makes delayed exploration feedback reusable for efficient meta-exploration
+  policy evaluation.
+- **Meta-layer RSI loop.** Dream-RSI continuously collects discovery histories through online
+  exploration, constructs replay simulators from them to refine meta-exploration strategies via
+  dreaming, and redeploys the upgraded policy online.
+- **Empirical validation.** Across algorithm engineering, mathematical optimization and GPU kernel
+  engineering, Dream-RSI improves both discovery effectiveness and efficiency in several settings.
 
 ## Release plan
 
