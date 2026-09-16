@@ -144,7 +144,7 @@ off-policy feedback. The improved policy is redeployed online, continuously expa
              Liu, Haolin and Liu, Rui and Wang, Xue and Zhuan, Yue and
              Kang, Wang-Cheng and Xiang, Renkai and Huang, Heng and
              Cheng, Xinwu and Guo, Yunsong},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2609.14858},
   year    = {2026}
 }
 ```
